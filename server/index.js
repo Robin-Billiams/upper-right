@@ -1,3 +1,3 @@
-app.get('/api/customizeAndPurchase', ( req, res ) {
+// app.get('/api/customizeAndPurchase', ( req, res ) {
 
-});
+// });
