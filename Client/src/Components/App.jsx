@@ -1,4 +1,5 @@
-// this is will be the renderin with react will start for webpac
+// this is where the statefull component will go
+
 $.ajax({
   url: `/api/customizePurchase`,
   type: `GET`,
