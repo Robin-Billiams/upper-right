@@ -54,9 +54,9 @@ let sampleData = function () {
         stars: _stars( i ),
         votes: _votes( i ),
       },
-      insPlan2Yr: _ins2Yr( i ), //2 year insurance plan
-      insPlan4Yr: _ins4Yr( i ), //4 year insurance plan
-      installments: tmp, //over 48 months 0% APR
+      insPlan2Yr: _ins2Yr( i ), // 2 year insurance plan
+      insPlan4Yr: _ins4Yr( i ), // 4 year insurance plan
+      installments: tmp, // over 48 months 0% APR
       buyNow: _buyNow( i, tmp ),
       savings: savings
     });
@@ -64,5 +64,23 @@ let sampleData = function () {
   return result;
 }
 
-db.collection('test').insertMany(sampleData());
-console.log( silence.name );
+
+
+
+
+db.collection('options').insertMany( sampleData() );
+// const build = function() {
+//   db.collection('options')
+//   .then(()=> {console.log('test')})
+// }
+// db.on('open').then((response) => {console.log('yes')});
+// collectionAsync( 'options' ).then((result)=>{console.log('result')})
+
+// .then((result) => {result.insertMany( sampleData() )})
+
+// .then( (result) => { console.log( 'testing promise' ) } )
+// new Promise (db.collection('options'))
+// .then((result) => {result.insertMany( sampleData() )})
+// .then(()=>{db.close()})
+
+
