@@ -1,7 +1,7 @@
 const Options = require( './buyOption.js' );
 const mongoose = require( 'mongoose' );
 const db = require( './index.js' );
-
+console.log('is running seed.js')
 
 const silence = new Options( { trialfix: 2111 } ); // rebuild this to build a random assortment of data
 /**
@@ -68,19 +68,5 @@ let sampleData = function () {
 
 
 
-db.collection('options').insertMany( sampleData() );
-// const build = function() {
-//   db.collection('options')
-//   .then(()=> {console.log('test')})
-// }
-// db.on('open').then((response) => {console.log('yes')});
-// collectionAsync( 'options' ).then((result)=>{console.log('result')})
-
-// .then((result) => {result.insertMany( sampleData() )})
-
-// .then( (result) => { console.log( 'testing promise' ) } )
-// new Promise (db.collection('options'))
-// .then((result) => {result.insertMany( sampleData() )})
-// .then(()=>{db.close()})
-
-
+db.collection( 'options' ).insertManyAsync( sampleData() )
+.then((result) => { db.close() } );
