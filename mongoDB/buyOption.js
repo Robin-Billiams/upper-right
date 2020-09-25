@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const optionsSchema = new mongoose.Schema({
   name: String,
   modelNum: Number,
+  description: String,
   averageReview: {
     stars: Number,
     votes: Number,
@@ -10,7 +11,8 @@ const optionsSchema = new mongoose.Schema({
   insPlan2Yr: Number, //2 year insurance plan
   insPlan4Yr: Number, //4 year insurance plan
   installments: Number, //over 48 months 0% APR
-  buyNow: Number
+  buyNow: Number,
+  savings: Number
 });
 const Options = mongoose.model( 'Options', optionsSchema );
 
