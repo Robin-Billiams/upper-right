@@ -9,14 +9,16 @@ app.use(express.urlencoded());
 
 const port = 3002;
 
+app.get('/', ( req, res ) => {
+  res.sendFile(`index.html`, {root: './Client/dist'});
+});
+
 app.get('/api/options', ( req, res ) => {
   Options.find().exec()// queries automaticaly return promises .exec() allows use of this
   .then( ( result ) => { res.send( result ) } );
 });
 
-app.get('/', ( req, res ) => {
-  res.sendFile(`index.html`, {root: './Client/dist'});
-});
+
 
 
 app.listen(port, () => {
