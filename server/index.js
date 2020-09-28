@@ -6,12 +6,13 @@ const path = require('path');
 
 app.use(express.json());
 app.use(express.urlencoded());
+app.use('/', express.static(__dirname + '/../Client/dist'));
 
 const port = 3002;
 
-app.get('/', ( req, res ) => {
-  res.sendFile(`index.html`, {root: './Client/dist'});
-});
+// app.get('/', ( req, res ) => {
+//   res.sendFile(`index.html`, {root: './Client/dist'});
+// });
 
 app.get('/api/options', ( req, res ) => {
   Options.find().exec()// queries automaticaly return promises .exec() allows use of this
