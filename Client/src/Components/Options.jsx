@@ -1,5 +1,7 @@
 const React = require('react');
+
 console.log('test');
+
 class Options extends React.Component {
   constructor() {
     super();
