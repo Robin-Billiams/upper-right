@@ -1,16 +1,17 @@
-const react = require('react');
+const React = require('react');
 
 class Options extends React.Component {
   constructor() {
     super();
     this.state = {
-    },
+    }
 
   }
+
   render() {
     return (
       <div>
-
+        <h1>HELLO WORLD!!</h1>
       </div>
     )
   }
@@ -23,3 +24,5 @@ class Options extends React.Component {
 //     this.setState( { \affected\: result})
 //   }
 // })
+
+module.exports = Options;

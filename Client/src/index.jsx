@@ -1,6 +1,5 @@
-const react = require('react');
-const reactDOM = require('react-dom');
+const React = require('react');
+const ReactDOM = require('react-dom');
 const Options = require('./Components/Options.jsx');
 
-
-reactDOM.render(<Options />, getElementById('Options'));
+ReactDOM.render(<Options />, document.getElementById('Options'));
