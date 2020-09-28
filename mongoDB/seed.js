@@ -65,8 +65,5 @@ let sampleData = function () {
 }
 
 
-
-
-
 db.collection( 'options' ).insertManyAsync( sampleData() )
 .then((result) => { db.close() } );

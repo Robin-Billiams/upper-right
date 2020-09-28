@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
-    "mongo-seed": "node mongoDB/seed.js"
+    "mongo-seed": "node mongoDB/seed.js",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -23,10 +24,12 @@
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
     "express": "^4.15.4",
+    "jest": "^26.4.2",
     "jquery": "^3.2.1",
     "moment": "^2.19.2",
     "mongoose": "^4.11.6",
     "nodemon": "^2.0.4",
+    "puppeteer": "^5.3.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
