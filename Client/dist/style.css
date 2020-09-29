@@ -1,0 +1,11 @@
+.specifications {
+  float: right;
+}
+.quality-control, .product-code, .all-stars, .btn-share {
+  display: inline-block;
+}
+
+.all-stars, .btn-share {
+  margin-left: 10px;
+  margin-right: 10px;
+}

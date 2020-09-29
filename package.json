@@ -23,6 +23,8 @@
     "bluebird": "^3.7.2",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "express": "^4.15.4",
     "jest": "^26.4.2",
     "jquery": "^3.2.1",
@@ -31,6 +33,7 @@
     "nodemon": "^2.0.4",
     "puppeteer": "^5.3.1",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-native-elements": "^2.3.2"
   }
 }
