@@ -1,7 +1,30 @@
-.specifications {
+.Options {
+  border: black 1px solid;
+  margin-right: 10%;
+  padding-right: 0%;
   float: right;
 }
-.quality-control, .product-code, .all-stars, .btn-share {
+.focus {
+  /* white-space: nowrap; */
+  /* display: inline-block; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+.heart {
+  margin-left: 4%;
+  height: 16px;
+  width: 16px;
+}
+
+.productName{
+  border: red 1px solid;
+  width: 70%;
+  height: 3em;
+  float: left;
+  word-wrap: normal;
+}
+
+.quality-control, .product-code, .all-stars, .btn-share, .heart {
   display: inline-block;
 }
 
