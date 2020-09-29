@@ -4,7 +4,7 @@ module.exports = {
   entry: `./Client/src/index.jsx`,
   output: {
     filename: 'bundle.js',
-    path: '/Client/dist'
+    path: `${__dirname}/Client/dist`
   },
   module: {
     loaders: [
