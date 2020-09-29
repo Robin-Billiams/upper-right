@@ -11,20 +11,37 @@
   /* flex-wrap: wrap; */
 }
 .heart {
-  margin-left: 4%;
+  margin-left: 3%;
   height: 16px;
   width: 16px;
 }
 
 .productName{
+  margin: 0;
   border: red 1px solid;
   width: 70%;
   height: 3em;
   float: left;
-  word-wrap: normal;
 }
 
-.quality-control, .product-code, .all-stars, .btn-share, .heart {
+.product-code{
+  color: #A9A9A9;
+  font-weight: bold;
+}
+
+.btn-share{
+  color: #0077C8;
+}
+
+.all-stars{
+  color: #0077C8;
+}
+.quality-control{
+  font-size: 12px;
+  border: yellow 1px solid;
+}
+.quality-control, .product-code, .all-stars, .btn-share, .heart, .wishList{
+  white-space: nowrap;
   display: inline-block;
 }
 
