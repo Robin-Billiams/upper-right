@@ -10,6 +10,7 @@ const QualityControl = ( { handleClick, object } ) => {
       <span className='all-stars'> { stars }_STARS { `(${votes})` } </span>
       <p className='btn-share' onClick={handleClick} style={ styl }>Share</p>
     </div>
+
   )
 }
 
