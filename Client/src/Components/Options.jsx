@@ -17,7 +17,7 @@ let sample = {
   addDetails: `See the mind-blowing sharpness and depth of real 8K with 16 times more resolution than HDTV.`,
   option: 'Size',
   options: [ '65"', '75"', '85"' ],
-  prices: [ 5,499.99,  6,999.99, 10,499],
+  prices: [ 5499.99,  6999.99, 10499.99],
   insPlan2Yr: 499.99,
   insPlan4Yr: 799.99,
   installments: 93.74,

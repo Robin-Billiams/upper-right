@@ -28,6 +28,10 @@
   color: #A9A9A9;
 }
 
+.optionSelect {
+  border: darkblue 1px solid;
+}
+
 .product-code{
   color: #A9A9A9;
   font-weight: bold;
