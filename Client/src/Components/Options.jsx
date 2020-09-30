@@ -13,6 +13,8 @@ let sample = {
     stars: 4.8,
     votes:31
   },
+  keyDetails: `Edge-to-edge viewing with Infinity Screen`,
+  addDetails: `See the mind-blowing sharpness and depth of real 8K with 16 times more resolution than HDTV.`,
   insPlan2Yr: 499.99,
   insPlan4Yr: 799.99,
   installments: 93.74,
@@ -27,6 +29,7 @@ class Options extends React.Component {
     this.state = {
       view: 0,
       products: [sample]
+      personilize: 0,
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -45,7 +48,12 @@ class Options extends React.Component {
         <Focus data={ products[view] } wishClick={this.wishClick} />
         <br/>
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] }/>
-        <div className='description'><p>Breif 40 word description</p></div>
+
+        <div className='description'>
+          { products[view].keyDetails }
+          <br/><br/>
+          { products[view].addDetails }
+        </div>
         <div className='possibilities'>
           <p>Choice of Size</p>
           <br/>
