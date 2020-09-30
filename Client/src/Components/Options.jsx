@@ -70,7 +70,12 @@ class Options extends React.Component {
         <div className='possibilities'>
           <p className='option'>{ option }</p>
           <br/>
-          <Choices select={ this.handleSelection } selected={ product.options[ personalize ] } price={ product.prices[ personalize ] } />
+          <Choices
+          select={ this.handleSelection }
+          selected={ personalize } // index of options and prices
+          options={ product.options }
+          prices={ product.prices }
+          />
         </div>
 
 

@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Choices = (props) => {
-  return (null);
+const Choices = ( { select, selected, price } ) => {
+  return (
+    <div className='Choices'>
+
+    </div>
+  );
 }
 
 export default Choices;
