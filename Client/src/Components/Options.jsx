@@ -29,6 +29,7 @@ class Options extends React.Component {
     this.state = {
       view: 0,
       products: [sample]
+      personilize: 0,
     }
     this.handleClick = this.handleClick.bind(this);
   }
@@ -49,7 +50,7 @@ class Options extends React.Component {
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] }/>
 
         <div className='description'>
-          {products[view].keyDetails}
+          { products[view].keyDetails }
           <br/><br/>
           { products[view].addDetails }
         </div>
