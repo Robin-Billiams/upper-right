@@ -1,5 +1,9 @@
 const React = require('react');
 import QualityControl from './QualityControl.jsx';
+import Focus from './Focus.jsx';
+
+
+
 
 let sample = {
   _id: 0,
@@ -18,8 +22,8 @@ let sample = {
 /***************************************/
 
 class Options extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       view: 0,
       products: [sample]
@@ -30,13 +34,15 @@ class Options extends React.Component {
   handleClick () {
     console.log('handle CLick');
   }
+  wishClick () {
+    console.log('wish Click');
+  }
 
   render() {
     const { view, products } = this.state;
     return (
-      <div className='specifications'>
-        <h4>PRODUCT NAME</h4><a onClick={ this.handleClick } style={{ cursor: 'pointer' }}>Wishlist</a>{// add a heart to the left of the word Wishlist
-  }
+      <div className='Options'>
+        <Focus data={ products[view] } wishClick={this.wishClick} />
         <br/>
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] }/>
         <div className='description'><p>Breif 40 word description</p></div>

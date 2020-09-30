@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "Client/index.jsx",
+
   "scripts": {
     "start": "nodemon server/index.js",
     "build": "webpack -d --watch",
