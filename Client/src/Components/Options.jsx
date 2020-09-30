@@ -15,6 +15,9 @@ let sample = {
   },
   keyDetails: `Edge-to-edge viewing with Infinity Screen`,
   addDetails: `See the mind-blowing sharpness and depth of real 8K with 16 times more resolution than HDTV.`,
+  option: 'Size',
+  options: [ '65"', '75"', '85"' ],
+  prices: [ 5,499.99,  6,999.99, 10,499],
   insPlan2Yr: 499.99,
   insPlan4Yr: 799.99,
   installments: 93.74,
@@ -29,9 +32,11 @@ class Options extends React.Component {
     this.state = {
       view: 0,
       products: [sample]
-      personilize: 0,
+      personalize: 0,
     }
     this.handleClick = this.handleClick.bind(this);
+    this.wishClick = this.wishClick.bind(this);
+    this.handleSelection = this.handleSelection.bind(this);
   }
 
   handleClick () {
@@ -40,9 +45,15 @@ class Options extends React.Component {
   wishClick () {
     console.log('wish Click');
   }
+  handleSelection(index) {
+    console.log('handle Selection')
+    //  on map bind index of choice
+    //  this.setState( this.state.personalize: index );
+    /** this will cause Choices to re render with new information calculated */
+  }
 
   render() {
-    const { view, products } = this.state;
+    const { view, products, personalize } = this.state;
     return (
       <div className='Options'>
         <Focus data={ products[view] } wishClick={this.wishClick} />
@@ -55,9 +66,9 @@ class Options extends React.Component {
           { products[view].addDetails }
         </div>
         <div className='possibilities'>
-          <p>Choice of Size</p>
+          <p className='size'>Size</p>
           <br/>
-          <div className='selectors'></div>
+          <Choices select={this.handleSelection} selected={}/>
         </div>
 
 

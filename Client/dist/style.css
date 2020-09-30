@@ -24,6 +24,10 @@
   float: left;
 }
 
+.size{
+  color: #A9A9A9;
+}
+
 .product-code{
   color: #A9A9A9;
   font-weight: bold;
