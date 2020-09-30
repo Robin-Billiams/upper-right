@@ -6,7 +6,7 @@ const Focus = ({ data, wishClick }) => {
   const { name } = data;
   return (
     <div className='focus'>
-      <h1><div className='productName'>{ name }</div></h1>
+      <h4><div className='productName'>{ name }</div></h4>
       <div className='heart'>{heart}  Wishlist</div>
     </div>
   )
