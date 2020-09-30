@@ -1,7 +1,7 @@
 const React = require('react');
 import QualityControl from './QualityControl.jsx';
 import Focus from './Focus.jsx';
-
+import Choices from './Choices.jsx'
 
 
 
@@ -27,12 +27,12 @@ let sample = {
 /***************************************/
 
 class Options extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor( props ) {
+    super( props );
     this.state = {
       view: 0,
-      products: [sample]
-      personalize: 0,
+      products: [ sample ],
+      personalize: 0
     }
     this.handleClick = this.handleClick.bind(this);
     this.wishClick = this.wishClick.bind(this);
@@ -54,6 +54,8 @@ class Options extends React.Component {
 
   render() {
     const { view, products, personalize } = this.state;
+    let product = products[view];
+    const { option } = product;
     return (
       <div className='Options'>
         <Focus data={ products[view] } wishClick={this.wishClick} />
@@ -66,9 +68,9 @@ class Options extends React.Component {
           { products[view].addDetails }
         </div>
         <div className='possibilities'>
-          <p className='size'>Size</p>
+          <p className='option'>{ option }</p>
           <br/>
-          <Choices select={this.handleSelection} selected={}/>
+          <Choices select={ this.handleSelection } selected={ product.options[ personalize ] } price={ product.prices[ personalize ] } />
         </div>
 
 
