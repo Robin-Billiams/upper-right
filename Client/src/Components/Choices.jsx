@@ -10,13 +10,13 @@ const Choices = ( { select, selected, options, prices } ) => {
           return (
             <sapn onClick={select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
               { choice }
-            </sapn>
+            </span>
           )
         } else {
           return (
             <sapn onClick={ select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
               { choice } +${ difference }
-            </sapn>
+            </span>
           )
         }
       })}
