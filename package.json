@@ -10,7 +10,7 @@
     "sass": "sass Client/src/scss:Client/dist",
     "sass:watch": "sass Client/src/scss:Client/dist --watch",
     "mongo-seed": "node mongoDB/seed.js",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "babel": {
     "presets": [
@@ -30,6 +30,7 @@
     "express": "^4.15.4",
     "jest": "^22.4.4",
     "react-test-renderer": "^16.13.1",
+    "supertest": "^5.0.0",
     "webpack": "^2.2.1"
   },
   "dependencies": {

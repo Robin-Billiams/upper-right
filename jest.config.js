@@ -3,10 +3,11 @@ module.exports = {
     testPathIgnorePatterns:  [
         "/node_modules/",
         "/mongoDB/",
-        "/server/"
+        "/server/",
+        "/test.js/"
     ],
     testURL: 'http://localhost:3002',
-    setupFiles: [
-        "./setupTests.js"
-    ],
+    // setupFiles: [
+    //     "./setupTests.js"
+    // ],
 }
