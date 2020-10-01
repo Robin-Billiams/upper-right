@@ -1,5 +1,5 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Options = require('./Components/Options.jsx');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Options from './Components/Options.jsx';
 
 ReactDOM.render(<Options />, document.getElementById('Options'));

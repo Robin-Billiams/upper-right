@@ -57,7 +57,7 @@ class Options extends React.Component {
     let product = products[view];
     const { option } = product;
     return (
-      <div className='Options'>
+      <div className='options'>
         <Focus data={ products[view] } wishClick={this.wishClick} />
         <br/>
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] }/>
@@ -92,4 +92,4 @@ class Options extends React.Component {
 //   }
 // })
 
-module.exports = Options;
+export default Options;
