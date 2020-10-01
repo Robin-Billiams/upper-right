@@ -4,10 +4,11 @@ module.exports = {
         "/node_modules/",
         "/mongoDB/",
         "/server/",
-        "/test.js/"
+        "/test.js/",
+        "/dist/"
     ],
     testURL: 'http://localhost:3002',
-    // setupFiles: [
-    //     "./setupTests.js"
-    // ],
+//     // setupFiles: [
+//     //     "./setupTests.js"
+//     // ],
 }

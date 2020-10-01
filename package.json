@@ -5,14 +5,13 @@
   "main": "Client/index.jsx",
   "scripts": {
     "start": "nodemon server/index.js",
-    "build": "webpack -d --config ./webpack.config.js",
-    "build:watch": "webpack -d --config ./webpack.config.js --watch",
+    "build": "webpack -d",
+    "build:watch": "webpack -d --watch",
     "sass": "sass Client/src/scss:Client/dist",
     "sass:watch": "sass Client/src/scss:Client/dist --watch",
     "mongo-seed": "node mongoDB/seed.js",
     "test": "jest --verbose"
   },
-  "jest": {},
   "babel": {
     "presets": [
       "@babel/preset-env",
