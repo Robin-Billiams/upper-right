@@ -10,7 +10,7 @@
     "sass": "sass Client/src/scss:Client/dist",
     "sass:watch": "sass Client/src/scss:Client/dist --watch",
     "mongo-seed": "node mongoDB/seed.js",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "jest": {},
   "babel": {
