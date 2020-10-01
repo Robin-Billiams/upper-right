@@ -11,7 +11,6 @@ const Protection = ( props ) => {
       <br/>
       <Insurance ins={ props.ins } pointer={ pointer }/>
       <p className='t-o-s'> By subscribing to Samsung Care+, I agree to Samsung Premium Care <a style={ pointer }>Terms of Service</a> and Service Contract<a style={ pointer }>Terms and Conditions</a></p>
-      <hr/>
     </div>
   )
 }
