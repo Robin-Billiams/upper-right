@@ -7,8 +7,8 @@ import Choices from './Choices.jsx'
 
 let sample = {
   _id: 0,
-  name: `65" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`,
-  modelNum: "QN65Q900TSFXZA",
+  name: [`65" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`, `75" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`, `85" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`],
+  modelNum: ["QN65Q900TSFXZA", "QN75Q900TSFXZA", "QN85Q900TSFXZA"],
   averageReview: {
     stars: 4.8,
     votes:31
@@ -32,7 +32,7 @@ class Options extends React.Component {
     this.state = {
       view: 0,
       products: [ sample ],
-      personalize: 0
+      personalize: 1
     }
     this.handleClick = this.handleClick.bind(this);
     this.wishClick = this.wishClick.bind(this);
@@ -57,10 +57,15 @@ class Options extends React.Component {
     let product = products[view];
     const { option } = product;
     return (
+<<<<<<< HEAD
       <div className='options'>
         <Focus data={ products[view] } wishClick={this.wishClick} />
+=======
+      <div className='Options'>
+        <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize }/>
+>>>>>>> Dynamicaly renders name and model number based on option selected
         <br/>
-        <QualityControl handleClick={ this.handleClick } object={ products[ view ] }/>
+        <QualityControl handleClick={ this.handleClick } object={ products[ view ] } selected={ personalize }/>
 
         <div className='description'>
           { products[view].keyDetails }
