@@ -40,13 +40,13 @@ class Options extends React.Component {
   }
 
   handleClick () {
-    console.log('handle CLick');
+    console.log( 'handle CLick' );
   }
   wishClick () {
-    console.log('wish Click');
+    console.log( 'wish Click' );
   }
   handleSelection(index) {
-    console.log('handle Selection')
+    console.log( 'handle Selection' + index )
     //  on map bind index of choice
     //  this.setState( this.state.personalize: index );
     /** this will cause Choices to re render with new information calculated */

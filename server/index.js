@@ -23,5 +23,5 @@ app.get('/api/options', ( req, res ) => {
 
 
 app.listen(port, () => {
-  console.log( `TESTING FOR FILE listening on port ${port}` );
+  console.log( `Listening on port ${port}` );
 });
