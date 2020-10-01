@@ -57,13 +57,8 @@ class Options extends React.Component {
     let product = products[view];
     const { option } = product;
     return (
-<<<<<<< HEAD
-      <div className='options'>
-        <Focus data={ products[view] } wishClick={this.wishClick} />
-=======
       <div className='Options'>
         <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize }/>
->>>>>>> Dynamicaly renders name and model number based on option selected
         <br/>
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] } selected={ personalize }/>
 

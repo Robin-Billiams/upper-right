@@ -6,13 +6,8 @@ const Focus = ({ data, wishClick, selected }) => {
   const { name } = data;
   return (
     <div className='focus'>
-<<<<<<< HEAD
-      <h4><div className='product-name'>{ name }</div></h4>
-      <div className='heart'>{heart}   Wishlist</div>
-=======
       <h4><div className='productName'>{ name[ selected ] }</div></h4>
       <div className='heart'>{heart}  Wishlist</div>
->>>>>>> Dynamicaly renders name and model number based on option selected
     </div>
   )
 }
