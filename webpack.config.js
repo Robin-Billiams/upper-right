@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 module.exports = {
   entry: `./Client/src/index.jsx`,
@@ -12,7 +12,7 @@ module.exports = {
         test: /\.jsx?/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['@babel/preset-env']
         }
       }
     ]
