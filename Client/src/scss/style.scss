@@ -9,6 +9,7 @@
   border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
+  margin-left: 60%;
   float: right;
 
   .description {
@@ -20,11 +21,21 @@
   }
 }
 
-// .focus {
-//   /* display: inline-block; */
-//   /* display: flex; */
-//   /* flex-wrap: wrap; */
-// }
+.protection {
+  a {
+    color: $blue;
+  }
+}
+
+.insurance {
+  border: green 1px solid;
+  text-align: justify;
+  .insurance-box {
+    @include nowrap-inline-block;
+    border: pink 1px solid;
+    width: 100;
+  }
+}
 
 .heart {
   @include nowrap-inline-block;

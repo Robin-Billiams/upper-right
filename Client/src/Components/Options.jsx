@@ -81,7 +81,7 @@ class Options extends React.Component {
         <hr/>
         <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } />
         <hr/>
-
+        <span>{tag}</span>
 
       </div>
     )
