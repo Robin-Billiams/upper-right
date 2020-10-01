@@ -2,10 +2,13 @@ import React from 'react';
 
 const Insurance = ( { ins, pointer } ) => {
   return (
-    <div>
+    <div className='insurance'>
     { ins.map( ( price, index ) => {
       return (
-        <span className='insurance-box' style={ pointer }></span>
+        <div className='insurance-box' style={ pointer }>
+          <span className='care+'>Samsung Care+</span>
+          <p className='ins-plan' key={ index }>${ price } for 2 years plan</p>
+        </div>
       )
     })}
     </div>
