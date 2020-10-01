@@ -81,6 +81,7 @@ class Options extends React.Component {
         <hr/>
         <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } />
         <hr/>
+        <div>{ tag } </div>
 
 
       </div>
@@ -95,4 +96,5 @@ class Options extends React.Component {
 //     this.setState( { \affected\: result})
 //   }
 // })
+
 export default Options;

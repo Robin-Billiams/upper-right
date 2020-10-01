@@ -8,13 +8,13 @@ const Choices = ( { select, selected, options, prices } ) => {
         let difference = prices[ index ] - prices[ selected ] ;
         if ( index === selected ) {
           return (
-            <sapn onClick={select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
+            <span onClick={select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
               { choice }
             </span>
           )
         } else {
           return (
-            <sapn onClick={ select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
+            <span onClick={ select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
               { choice } +${ difference }
             </span>
           )
