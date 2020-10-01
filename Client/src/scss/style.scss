@@ -1,3 +1,6 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -7,17 +10,24 @@
   margin-right: 10%;
   padding-right: 0%;
   float: right;
-}
-.options .description {
-  display: block;
-}
-.options .option {
-  color: #a9a9a9;
+
+  .description {
+    display: block;
+  }
+
+  .option {
+    color: $grey;
+  }
 }
 
+// .focus {
+//   /* display: inline-block; */
+//   /* display: flex; */
+//   /* flex-wrap: wrap; */
+// }
+
 .heart {
-  white-space: nowrap;
-  display: inline-block;
+  @include nowrap-inline-block;
   margin-left: 3%;
   height: 16px;
   width: 16px;
@@ -38,27 +48,23 @@
 }
 
 .product-code {
-  white-space: nowrap;
-  display: inline-block;
-  color: #a9a9a9;
+  @include nowrap-inline-block;
+  color: $grey;
   font-weight: bold;
 }
 
 .btn-share {
-  white-space: nowrap;
-  display: inline-block;
-  color: #0077C8;
+  @include nowrap-inline-block;
+  color: $blue;
 }
 
 .all-stars {
-  white-space: nowrap;
-  display: inline-block;
-  color: #0077C8;
+  @include nowrap-inline-block;
+  color: $blue;
 }
 
 .quality-control {
-  white-space: nowrap;
-  display: inline-block;
+  @include nowrap-inline-block;
   font-size: 12px;
   border: yellow 1px solid;
 }
@@ -67,5 +73,3 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-
-/*# sourceMappingURL=style.css.map */
