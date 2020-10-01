@@ -23,7 +23,7 @@ afterAll(() => {
   browser.close();
 });
 
-describe('choose buttons', () => {
+describe( 'choose buttons', () => {
   beforeEach(async () => {
     await page.goto( 'http://localhost:3002', { waitUntil: 'networkidle2' } );
   });
@@ -39,9 +39,14 @@ describe('choose buttons', () => {
   });
 
   test('can click button', async () => {
+    // describe('Options', () => {
+//   test('initial title is correct', () => {
 
+//   });
+
+// });
   });
-});
+
 
 test('testing test', () => {
   expect(true).toBe(true);

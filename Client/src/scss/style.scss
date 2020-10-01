@@ -29,15 +29,16 @@
 .heart {
   @include nowrap-inline-block;
   margin-left: 3%;
+  margin-right: 0;
   height: 16px;
   width: 16px;
 }
 
 .product-name {
-  font-size: 21px;
+  font-size: 19px;
   margin: 0;
   border: red 1px solid;
-  width: 70%;
+  width: 80%;
   height: 3em;
   float: left;
 }

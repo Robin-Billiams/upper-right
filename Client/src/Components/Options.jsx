@@ -1,8 +1,8 @@
 const React = require('react');
 import QualityControl from './QualityControl.jsx';
 import Focus from './Focus.jsx';
-import Choices from './Choices.jsx'
-
+import Choices from './Choices.jsx';
+import Protection from './Protection.jsx';
 
 
 let sample = {
@@ -77,6 +77,7 @@ class Options extends React.Component {
           prices={ product.prices }
           />
         </div>
+        <Protection />
 
 
       </div>
