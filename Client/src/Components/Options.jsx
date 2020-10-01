@@ -77,7 +77,8 @@ class Options extends React.Component {
           prices={ product.prices }
           />
         </div>
-        <Protection />
+        <hr/>
+        <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } />
 
 
       </div>

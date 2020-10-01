@@ -8,15 +8,15 @@ const Choices = ( { select, selected, options, prices } ) => {
         let difference = prices[ index ] - prices[ selected ] ;
         if ( index === selected ) {
           return (
-            <sapn onClick={ ( index ) => { select( index ) } } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
+            <span onClick={ ( index ) => { select( index ) } } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
               { choice }
-            </sapn>
+            </span>
           )
         } else {
           return (
-            <sapn onClick={ ( index ) => { select( index ) } } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
+            <span onClick={ ( index ) => { select( index ) } } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
               { choice } +${ difference }
-            </sapn>
+            </span>
           )
         }
       })}
