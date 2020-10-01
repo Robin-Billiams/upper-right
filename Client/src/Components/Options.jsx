@@ -95,5 +95,4 @@ class Options extends React.Component {
 //     this.setState( { \affected\: result})
 //   }
 // })
-
 export default Options;
