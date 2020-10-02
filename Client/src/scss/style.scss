@@ -39,7 +39,15 @@
   }
 }
 
-.tag-icon {
+.buy-now-price {
+  .total {
+    text-decoration: 'line-through';
+    size: 10px;
+    display: 'block';
+  }
+}
+
+  .tag-icon {
   height: 12px;
   width: 12px;
 }

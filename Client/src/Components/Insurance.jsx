@@ -7,7 +7,7 @@ const Insurance = ( { ins, pointer } ) => {
       return (
         <div className='insurance-box' style={ pointer }>
           <span className='care+' key={ key }>Samsung Care+</span>
-          <p className='ins-plan' >${ price } for 2 years plan</p>
+          <p className='ins-plan'>${ price } for 2 years plan</p>
         </div>
       )
     })}

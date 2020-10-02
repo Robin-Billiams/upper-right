@@ -8,7 +8,8 @@ const Financing = ( { instl, total } ) => {
       excludes tax and shipping
       <br/>
       <a className='with-financing-btn' style={ { cursor: 'pointer' } }> WITH SAMSUNG FINANCING</a>
-      <hr text="OR"/>
+      <hr/>
+      <span classNam='buy-now-price'><p className='discounted'>${ total - 1000 }</p><text className='total'>${ total }</text></span>
     </div>
   )
 }
