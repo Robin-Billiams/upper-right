@@ -9,6 +9,7 @@
   border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
+  margin-left: 60%;
   float: right;
 
   .description {
@@ -20,11 +21,71 @@
   }
 }
 
-// .focus {
-//   /* display: inline-block; */
-//   /* display: flex; */
-//   /* flex-wrap: wrap; */
-// }
+.protection {
+  a {
+    color: $blue;
+  }
+}
+.installments {
+  text-align: center;
+  color: $grey;
+  .cost-a-month {
+    @include nowrap-inline-block;
+    color: black;
+    margin: 0;
+  }
+  .with-financing-btn {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: $blue;
+    cursor: 'pointer';
+  }
+}
+
+.buy-now-price {
+  width: auto;
+  .discounted {
+    @include nowrap-inline-block;
+  }
+  .total {
+    @include nowrap-inline-block;
+    size: 10px;
+  }
+}
+
+.savings {
+  @include nowrap-inline-block;
+  color: black;
+  font-size: 14px;
+}
+
+.savings, .discounted, .total {
+  margin: 0;
+}
+
+.discounted {
+  font-size: 24px;
+  color: black;
+}
+.total{
+  text-decoration: line-through;
+}
+
+.tag-icon {
+  height: 12px;
+  width: 12px;
+}
+
+.insurance {
+  border: green 1px solid;
+  text-align: justify;
+  .insurance-box {
+    @include nowrap-inline-block;
+    border: pink 1px solid;
+    width: 100;
+  }
+}
 
 .heart {
   @include nowrap-inline-block;

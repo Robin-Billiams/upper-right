@@ -6,6 +6,7 @@
   border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
+  margin-left: 60%;
   float: right;
 }
 .options .description {
@@ -13,6 +14,77 @@
 }
 .options .option {
   color: #a9a9a9;
+}
+
+.protection a {
+  color: #0077C8;
+}
+
+.installments {
+  text-align: center;
+  color: #a9a9a9;
+}
+.installments .cost-a-month {
+  white-space: nowrap;
+  display: inline-block;
+  color: black;
+  margin: 0;
+}
+.installments .with-financing-btn {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #0077C8;
+  cursor: "pointer";
+}
+
+.buy-now-price {
+  width: auto;
+}
+.buy-now-price .discounted {
+  white-space: nowrap;
+  display: inline-block;
+}
+.buy-now-price .total {
+  white-space: nowrap;
+  display: inline-block;
+  size: 10px;
+}
+
+.savings {
+  white-space: nowrap;
+  display: inline-block;
+  color: black;
+  font-size: 14px;
+}
+
+.savings, .discounted, .total {
+  margin: 0;
+}
+
+.discounted {
+  font-size: 24px;
+  color: black;
+}
+
+.total {
+  text-decoration: line-through;
+}
+
+.tag-icon {
+  height: 12px;
+  width: 12px;
+}
+
+.insurance {
+  border: green 1px solid;
+  text-align: justify;
+}
+.insurance .insurance-box {
+  white-space: nowrap;
+  display: inline-block;
+  border: pink 1px solid;
+  width: 100;
 }
 
 .heart {
