@@ -34,10 +34,21 @@
   cursor: "pointer";
 }
 
+.buy-now-price {
+  width: auto;
+}
+.buy-now-price .discounted {
+  white-space: nowrap;
+  display: inline-block;
+}
 .buy-now-price .total {
-  text-decoration: "line-through";
+  white-space: nowrap;
+  display: inline-block;
   size: 10px;
-  display: "block";
+}
+
+.total {
+  text-decoration: line-through;
 }
 
 .tag-icon {

@@ -40,14 +40,21 @@
 }
 
 .buy-now-price {
+  width: auto;
+  .discounted {
+    @include nowrap-inline-block;
+  }
   .total {
-    text-decoration: 'line-through';
+    @include nowrap-inline-block;
     size: 10px;
-    display: 'block';
   }
 }
 
-  .tag-icon {
+.total{
+  text-decoration: line-through;
+}
+
+.tag-icon {
   height: 12px;
   width: 12px;
 }
