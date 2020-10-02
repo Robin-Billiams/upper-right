@@ -116,6 +116,7 @@
 }
 
 .svg-icon {
+  fill: $blue;
   height: 11px;
   width: 11px;
   float: bottom;
@@ -127,6 +128,7 @@
 }
 
 .store-finder {
+  color: $blue;
   white-space: nowrap;
   display: block;
   width: 100;
