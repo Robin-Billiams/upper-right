@@ -29,6 +29,10 @@
   display: inline-block;
   color: black;
 }
+.installments .with-financing-btn {
+  color: #0077C8;
+  cursor: "pointer";
+}
 
 .tag-icon {
   height: 12px;

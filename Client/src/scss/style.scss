@@ -33,6 +33,10 @@
     @include nowrap-inline-block;
     color: black;
   }
+  .with-financing-btn {
+    color: $blue;
+    cursor: 'pointer';
+  }
 }
 
 .tag-icon {
