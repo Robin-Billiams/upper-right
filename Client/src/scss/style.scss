@@ -128,6 +128,24 @@
   border: darkblue 1px solid;
 }
 
+.buy-now-span p {
+  white-space: nowrap;
+  border-radius: 25px;
+  display: block;
+  float: center;
+  text-align: center;
+  color: white;
+  backGround-color: blue;
+  margin: 0;
+  padding: 14px 0;
+}
+
+.buy-now {
+  font-size: 14px;
+}
+
+
+
 .product-code {
   @include nowrap-inline-block;
   color: $grey;
