@@ -89,8 +89,7 @@
 
 .heart {
   @include nowrap-inline-block;
-  margin-left: 3%;
-  margin-right: 0;
+  margin: 0;
   height: 16px;
   width: 16px;
 }
@@ -102,6 +101,26 @@
   width: 80%;
   height: 3em;
   float: left;
+}
+
+.reward-span{
+  text-align: center;
+  display: block;
+  border: purple 1px solid;
+}
+
+.rewards-btn {
+  size: 5px;
+  display: inline-block;
+  color: $blue;
+}
+
+.plus-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  float: left;
+  fill: $blue;
 }
 
 .option-select {
