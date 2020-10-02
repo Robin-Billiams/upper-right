@@ -115,6 +115,24 @@
   color: $blue;
 }
 
+.svg-icon {
+  height: 11px;
+  width: 11px;
+  float: bottom;
+}
+
+.where-to-buy {
+  font-size: 12px;
+  display: inline-block;
+}
+
+.store-finder {
+  white-space: nowrap;
+  display: block;
+  width: 100;
+  float: left;
+}
+
 .plus-icon {
   height: 16px;
   width: 16px;
