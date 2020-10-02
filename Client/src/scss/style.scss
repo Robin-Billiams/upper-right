@@ -122,6 +122,22 @@
   float: bottom;
 }
 
+.e-t-a {
+  @include nowrap-inline-block;
+  float: right;
+}
+.free-shipping {
+  margin: 0;
+  font-size: 9px;
+  display: inline-block;
+}
+
+.truck-icon {
+  fill: $blue;
+  height: 15px;
+  width: 15px;
+}
+
 .where-to-buy {
   font-size: 12px;
   display: inline-block;
