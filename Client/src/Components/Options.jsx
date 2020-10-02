@@ -91,10 +91,10 @@ class Options extends React.Component {
         <span className='reward-span'>
           <a className='rewards-btn' style={ { cursor: 'pointer' } } onClick={ () => { this.handleClick( ' 2% in rewards' ) }}>{plus}  Earn 2% back in rewards</a>
         </span>
-        <br/>
         <span className='buy-now-span' onClick={ () => { this.handleClick( 'BUY NOW' ) } } style={ { cursor: 'pointer' } }>
           <b><p className='buy-now'>B U Y &nbsp; &nbsp; N O W</p></b>
         </span>
+        <br/>
 
       </div>
     )
