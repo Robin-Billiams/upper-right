@@ -103,6 +103,26 @@
   float: left;
 }
 
+.reward-span{
+  text-align: center;
+  display: block;
+  border: purple 1px solid;
+}
+
+.rewards-btn {
+  size: 5px;
+  display: inline-block;
+  color: $blue;
+}
+
+.plus-icon {
+  height: 16px;
+  width: 16px;
+  margin-right: 4px;
+  float: left;
+  fill: $blue;
+}
+
 .option-select {
   text-align: center;
   border: darkblue 1px solid;
