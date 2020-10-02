@@ -16,8 +16,8 @@
   color: #a9a9a9;
 }
 
-.protection a {
-  color: #0077C8;
+.protection a.tos {
+  color: #0037a0;
 }
 
 .installments {
@@ -129,6 +129,11 @@
   float: right;
 }
 
+.arival {
+  font-size: 9px;
+  color: #a9a9a9;
+}
+
 .free-shipping {
   margin: 0;
   font-size: 9px;
@@ -147,7 +152,7 @@
 }
 
 .store-finder {
-  color: #0077C8;
+  color: #0037a0;
   white-space: nowrap;
   display: block;
   width: 100;

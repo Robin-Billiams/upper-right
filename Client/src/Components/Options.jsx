@@ -105,7 +105,7 @@ class Options extends React.Component {
         <div className='e-t-a'>
           {truck}<p className='free-shipping'><b>Free shipping and free 15-day returns</b></p>
           <br/>
-
+          <p className='arival'>Ships by {Moment(Moment().add(2, 'days').calendar()).format('MMM Do')}</p>
         </div>
       </div>
     )
