@@ -90,8 +90,7 @@
 .heart {
   white-space: nowrap;
   display: inline-block;
-  margin-left: 3%;
-  margin-right: 0;
+  margin: 0;
   height: 16px;
   width: 16px;
 }

@@ -41,8 +41,8 @@ class Options extends React.Component {
     this.handleSelection = this.handleSelection.bind(this);
   }
 
-  handleClick () {
-    console.log('handle CLick');
+  handleClick ( input ) {
+    console.log('handle CLick' + input );
   }
   wishClick () {
     console.log('wish Click');
@@ -85,6 +85,8 @@ class Options extends React.Component {
         <div><span className='tag' >{ tag }</span> Save 25% with the Total Home Event. Purchase one eligible Samsun product and get 25% back on an equal or lesser-priced item from a different category -- now through October 3rd. <a style={ { cursor: 'pointer' } } className='click-and-save-info'>Click here to learn more</a>.</div>
         <br/>
         <Financing instl={ product.installments } total={ product.prices[ personalize ] }/>
+        <br/>
+        <a className='rewards-btn' style={ { cursor: 'pointer' } } onClick={ handleClcik( ' 2% in rewards' )}>Earn 2% back in rewards</a>
         <br/>
 
       </div>
