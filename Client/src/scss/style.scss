@@ -26,6 +26,19 @@
     color: $blue;
   }
 }
+.installments {
+  text-align: center;
+  color: $grey;
+  .cost-a-month {
+    @include nowrap-inline-block;
+    color: black;
+  }
+}
+
+.tag-icon {
+  height: 12px;
+  width: 12px;
+}
 
 .insurance {
   border: green 1px solid;
