@@ -7,7 +7,7 @@ const Financing = ( { instl, total } ) => {
       <br/>
       excludes tax and shipping
       <br/>
-      <a className='with-financing-btn' style={ { cursor: 'pointer' } }> WITH SAMSUNG FINANCING</a>
+      <a className='with-financing-btn' > WITH SAMSUNG FINANCING</a>
       <hr/>
       <span className='buy-now-price'><p className='discounted'>${ (total - 1000).toLocaleString('en') }  </p> <p className='total'>${ total.toLocaleString('en') }</p>
       <br/>

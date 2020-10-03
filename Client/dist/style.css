@@ -28,24 +28,6 @@
   font-size: 14px;
 }
 
-.installments {
-  text-align: center;
-  color: #a9a9a9;
-}
-.installments .cost-a-month {
-  white-space: nowrap;
-  display: inline-block;
-  color: black;
-  margin: 0;
-}
-.installments .with-financing-btn {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: #0077C8;
-  cursor: "pointer";
-}
-
 .buy-now-price {
   width: auto;
 }
@@ -64,6 +46,7 @@
   display: inline-block;
   color: black;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .savings, .discounted, .total {
@@ -98,7 +81,6 @@
   flex-grow: 2;
   margin: 3px;
   display: flex;
-  flex-basis: 210px;
   min-width: 210px;
   border-radius: 5px;
   border: #a6a6a6 1px solid;
@@ -140,6 +122,28 @@
   font-size: 11px;
 }
 
+.installments {
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+.installments .cost-a-month {
+  white-space: nowrap;
+  display: inline-block;
+  color: black;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.installments .with-financing-btn {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #0077C8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .heart {
   white-space: nowrap;
   display: inline-block;
@@ -173,7 +177,7 @@
 }
 
 .protection-details {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .svg-icon {
