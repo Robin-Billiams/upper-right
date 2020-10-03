@@ -20,6 +20,12 @@ app.get('/api/options', ( req, res ) => {
   .then( ( result ) => { res.send( result ) } );
 });
 
+app.get('/api/selection', ( req, res ) => {
+  let test = req.body;
+  console.log(test);
+  res.send('ok')
+})
+
 
 
 
