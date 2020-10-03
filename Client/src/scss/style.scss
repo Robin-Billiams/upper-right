@@ -142,10 +142,11 @@
 
 .heart {
   @include nowrap-inline-block;
-  margin: 0;
+  margin-left: 5px;
   height: 16px;
   width: 16px;
   font-family: arial;
+  fill: $sam-sung-blue;
 }
 
 .product-name {
@@ -159,12 +160,28 @@
 .reward-span{
   text-align: center;
   display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .rewards-btn {
-  size: 5px;
   display: inline-block;
   color: $sam-sung-blue;
+}
+
+.dynamic-line {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  margin: 35px 0 20px;
+  .or {
+    background: #fff;
+    padding: 0 10px;
+    color: black;
+    font-size: 16px;
+  }
 }
 
 .protection-title {
@@ -177,20 +194,26 @@
 
 .svg-icon {
   fill: $sam-sung-blue;
-  height: 11px;
-  width: 11px;
+  height: 13px;
+  width: 13px;
   float: bottom;
 }
 
+
+
 .e-t-a {
   @include nowrap-inline-block;
+  margin-top: 10px;
+  display: flex;
   float: right;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-width: 200px;
 }
-
-
 .arival {
   font-size: 9px;
   color: $grey;
+  margin: 0;
 }
 .free-shipping {
   margin: 0;
@@ -198,23 +221,37 @@
   display: inline-block;
 }
 
-.truck-icon {
-  fill: $sam-sung-blue;
-  height: 15px;
-  width: 15px;
-}
-
-.where-to-buy {
-  font-size: 12px;
-  display: inline-block;
-}
 
 .store-finder {
   color: $dark-blue;
   white-space: nowrap;
-  display: block;
+  display: flex;
   width: 100;
+  align-self: center;
   float: left;
+  margin-top: 20px;
+}
+.svg-icon {
+  fill: $sam-sung-blue;
+  height: 16px;
+  width: 16px;
+}
+.where-to-buy {
+  font-size: 12px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+}
+.geo-flag {
+  display: block;
+  margin: 0;
+}
+
+
+.truck-icon {
+  fill: $sam-sung-blue;
+  height: 15px;
+  width: 15px;
 }
 
 .plus-icon {
@@ -280,7 +317,6 @@
 .quality-control {
   @include nowrap-inline-block;
   font-size: 10px;
-  border: yellow 1px solid;
 }
 
 .all-stars, .btn-share {

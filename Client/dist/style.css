@@ -147,10 +147,11 @@
 .heart {
   white-space: nowrap;
   display: inline-block;
-  margin: 0;
+  margin-left: 5px;
   height: 16px;
   width: 16px;
   font-family: arial;
+  fill: #0077C8;
 }
 
 .product-name {
@@ -164,12 +165,28 @@
 .reward-span {
   text-align: center;
   display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .rewards-btn {
-  size: 5px;
   display: inline-block;
   color: #0077C8;
+}
+
+.dynamic-line {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  margin: 35px 0 20px;
+}
+.dynamic-line .or {
+  background: #fff;
+  padding: 0 10px;
+  color: black;
+  font-size: 16px;
 }
 
 .protection-title {
@@ -182,20 +199,26 @@
 
 .svg-icon {
   fill: #0077C8;
-  height: 11px;
-  width: 11px;
+  height: 13px;
+  width: 13px;
   float: bottom;
 }
 
 .e-t-a {
   white-space: nowrap;
   display: inline-block;
+  margin-top: 10px;
+  display: flex;
   float: right;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-width: 200px;
 }
 
 .arival {
   font-size: 9px;
   color: #a9a9a9;
+  margin: 0;
 }
 
 .free-shipping {
@@ -204,23 +227,38 @@
   display: inline-block;
 }
 
-.truck-icon {
+.store-finder {
+  color: #0037a0;
+  white-space: nowrap;
+  display: flex;
+  width: 100;
+  align-self: center;
+  float: left;
+  margin-top: 20px;
+}
+
+.svg-icon {
   fill: #0077C8;
-  height: 15px;
-  width: 15px;
+  height: 16px;
+  width: 16px;
 }
 
 .where-to-buy {
   font-size: 12px;
+  margin: 0;
   display: inline-block;
+  font-weight: bold;
 }
 
-.store-finder {
-  color: #0037a0;
-  white-space: nowrap;
+.geo-flag {
   display: block;
-  width: 100;
-  float: left;
+  margin: 0;
+}
+
+.truck-icon {
+  fill: #0077C8;
+  height: 15px;
+  width: 15px;
 }
 
 .plus-icon {
@@ -289,7 +327,6 @@
   white-space: nowrap;
   display: inline-block;
   font-size: 10px;
-  border: yellow 1px solid;
 }
 
 .all-stars, .btn-share {

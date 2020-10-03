@@ -100,8 +100,7 @@ class Options extends React.Component {
           <b><p className='buy-now'>B U Y &nbsp; &nbsp; N O W</p></b>
         </span>
         <div className='store-finder' onClick={ () => { this.handleClick( ' store finder' ) } } style={ { cursor: 'pointer' } }>
-          <span className='geo-flag'>{geoFlag}</span>
-          <p className='where-to-buy'>Where to buy</p>
+          {geoFlag} <p className='where-to-buy'>Where to buy</p>
         </div>
         <div className='e-t-a'>
           {truck}<p className='free-shipping'><b>Free shipping and free 15-day returns</b></p>
