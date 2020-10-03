@@ -21,9 +21,9 @@ app.get('/api/options', ( req, res ) => {
 });
 
 app.get('/api/selection', ( req, res ) => {
-  let test = req.body;
-  console.log(test);
-  res.send('ok')
+  Options.find(req.body).exec()
+  // .then( (test) => { console.log( test) } )
+  .then( (result) => { res.send(result) });
 })
 
 
