@@ -135,7 +135,7 @@
   font-size: 16px;
   font-weight: bold;
 }
-.installments .with-financing-btn {
+.installments .with-financing-btn, .installments img {
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -144,14 +144,21 @@
   cursor: pointer;
 }
 
-.heart {
+.wishlist {
+  display: block;
+  color: #0077C8;
+}
+
+.heart-icon {
   white-space: nowrap;
   display: inline-block;
   margin-left: 5px;
   height: 16px;
   width: 16px;
-  font-family: arial;
-  fill: #0077C8;
+  color: #0077C8;
+}
+.heart-icon .wishlist {
+  cursor: pointer;
 }
 
 .product-name {
@@ -215,16 +222,23 @@
   max-width: 200px;
 }
 
-.arival {
-  font-size: 9px;
-  color: #a9a9a9;
-  margin: 0;
+.truck-icon {
+  fill: #0077C8;
+  height: 15px;
+  width: 15px;
 }
 
 .free-shipping {
   margin: 0;
   font-size: 9px;
-  display: inline-block;
+}
+
+.arival {
+  width: 100px;
+  font-size: 9px;
+  color: #a9a9a9;
+  margin: 0;
+  text-align: right;
 }
 
 .store-finder {
@@ -255,12 +269,6 @@
   margin: 0;
 }
 
-.truck-icon {
-  fill: #0077C8;
-  height: 15px;
-  width: 15px;
-}
-
 .plus-icon {
   height: 16px;
   width: 16px;
@@ -272,6 +280,7 @@
 .Choices {
   display: flex;
   flex-direction: row;
+  margin-bottom: 40px;
 }
 
 .option-select {
