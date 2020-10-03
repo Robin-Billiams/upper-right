@@ -77,7 +77,6 @@ class Options extends React.Component {
         </div>
         <div className='possibilities'>
           <p className='option'>{ option }</p>
-          <br/>
           <Choices
           select={ this.handleSelection }
           selected={ personalize } // index of options and prices

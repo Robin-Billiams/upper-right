@@ -172,10 +172,6 @@
   flex-direction: row;
 }
 
-span b {
-  display: block;
-}
-
 .option-select {
   display: flex;
   flex-direction: column;
