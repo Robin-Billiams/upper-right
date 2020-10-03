@@ -3,11 +3,11 @@
 }
 
 .options {
-  border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
   margin-left: 60%;
   float: right;
+  font-family: sans-serif;
 }
 .options .description {
   display: block;
@@ -16,8 +16,16 @@
   color: #a9a9a9;
 }
 
+.description {
+  font-family: sans-serif;
+}
+
 .protection a.tos {
   color: #0037a0;
+}
+
+.protection-details {
+  font-size: 14px;
 }
 
 .installments {
@@ -77,14 +85,14 @@
 }
 
 .insurance {
-  border: green 1px solid;
   text-align: justify;
+  font-size: 16;
 }
 .insurance .insurance-box {
   white-space: nowrap;
   display: inline-block;
-  border: pink 1px solid;
   width: 100;
+  font-size: 12px;
 }
 
 .heart {
@@ -93,12 +101,12 @@
   margin: 0;
   height: 16px;
   width: 16px;
+  font-family: arial;
 }
 
 .product-name {
   font-size: 20px;
   margin: 0;
-  border: red 1px solid;
   width: 80%;
   height: 3em;
   float: left;
@@ -107,13 +115,20 @@
 .reward-span {
   text-align: center;
   display: block;
-  border: purple 1px solid;
 }
 
 .rewards-btn {
   size: 5px;
   display: inline-block;
   color: #0077C8;
+}
+
+.protection-title {
+  font-size: 14px;
+}
+
+.protection-details {
+  font-size: 12px;
 }
 
 .svg-icon {

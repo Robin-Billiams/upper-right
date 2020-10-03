@@ -6,12 +6,11 @@
 }
 
 .options {
-  border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
   margin-left: 60%;
   float: right;
-
+  font-family: sans-serif;
   .description {
     display: block;
   }
@@ -21,15 +20,20 @@
   }
 }
 
-// .option {
-//   margin-bottom: 0;
-// }
+.description {
+  font-family: sans-serif;
+}
 
 .protection {
   a.tos {
     color: $dark-blue;
   }
 }
+
+.protection-details {
+  font-size: 14px;
+}
+
 .installments {
   text-align: center;
   color: $grey;
@@ -82,12 +86,12 @@
 }
 
 .insurance {
-  border: green 1px solid;
   text-align: justify;
+  font-size: 16;
   .insurance-box {
     @include nowrap-inline-block;
-    border: pink 1px solid;
     width: 100;
+    font-size: 12px;
   }
 }
 
@@ -96,12 +100,12 @@
   margin: 0;
   height: 16px;
   width: 16px;
+  font-family: arial;
 }
 
 .product-name {
   font-size: 20px;
   margin: 0;
-  border: red 1px solid;
   width: 80%;
   height: 3em;
   float: left;
@@ -110,13 +114,20 @@
 .reward-span{
   text-align: center;
   display: block;
-  border: purple 1px solid;
 }
 
 .rewards-btn {
   size: 5px;
   display: inline-block;
   color: $sam-sung-blue;
+}
+
+.protection-title {
+  font-size: 14px;
+}
+
+.protection-details {
+  font-size: 12px;
 }
 
 .svg-icon {

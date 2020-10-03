@@ -5,8 +5,7 @@ let pointer = { cursor: 'pointer' };
 const Protection = ( props ) => {
   return(
     <div className='protection'>
-      <p className='protection-title'> Get added protection and confidence. </p>
-      <br/>
+      <p className='protection-title'><b> Get added protection and confidence.</b> </p>
       <p className='protection-details'> When the unexpected happens, rest easy with Samsung Care+. From a personal setup session to continued protection for mechanical and electrical breakdowns, we'll take care of you every step of the way</p>
       <br/>
       <Insurance ins={ props.ins } pointer={ pointer }/>
