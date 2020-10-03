@@ -96,7 +96,7 @@
 }
 
 .product-name {
-  font-size: 19px;
+  font-size: 20px;
   margin: 0;
   border: red 1px solid;
   width: 80%;
@@ -167,9 +167,27 @@
   fill: #0077C8;
 }
 
+.Choices {
+  display: flex;
+  flex-direction: row;
+}
+
+span b {
+  display: block;
+}
+
 .option-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 60px;
+  width: calc(33% - 10px);
+  border-radius: 5px;
+  margin: 0 10px 10px 0px;
   text-align: center;
-  border: darkblue 1px solid;
+  border: #a6a6a6 1px solid;
+  font-size: 14px;
 }
 
 .buy-now-span p {

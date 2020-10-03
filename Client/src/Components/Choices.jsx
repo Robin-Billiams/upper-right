@@ -8,13 +8,13 @@ const Choices = ( { select, selected, options, prices } ) => {
         if ( index === selected ) {
           return (
             <span onClick={select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
-              { choice }
+              <b className='choice'>{ choice }</b>
             </span>
           )
         } else {
           return (
             <span onClick={ select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>
-              { choice } +${ difference }
+              <b className='choice'>{ choice }</b> +${ difference }
             </span>
           )
         }
