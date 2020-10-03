@@ -64,7 +64,7 @@ class Options extends React.Component {
     const { option } = product;
     return (
       <div className='options'>
-        <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize }/>
+        <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize } heart={ SVG.heart }/>
         <br/>
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] } selected={ personalize }/>
 
