@@ -212,8 +212,6 @@
 }
 
 .e-t-a {
-  white-space: nowrap;
-  display: inline-block;
   margin-top: 10px;
   display: flex;
   float: right;
