@@ -6,7 +6,7 @@ const Insurance = ( { ins, pointer } ) => {
     { ins.map( ( price, key ) => {
       return (
         <div className='insurance-box' style={ pointer }>
-          <span className='care+' key={ key }>Samsung Care+</span>
+          <span className='care' key={ key }>Samsung Care+</span>
           <p className='ins-plan'>${ price } for 2 years plan</p>
         </div>
       )

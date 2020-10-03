@@ -85,14 +85,33 @@
 }
 
 .insurance {
-  text-align: justify;
-  font-size: 16;
+  display: flex;
+  justify-content: space-around;
 }
-.insurance .insurance-box {
-  white-space: nowrap;
-  display: inline-block;
-  width: 100;
-  font-size: 12px;
+
+.insurance-box {
+  flex-grow: 1;
+  margin: 3px;
+  display: flex;
+  border-radius: 5px;
+  border: #a6a6a6 1px solid;
+  font-size: 14px;
+}
+
+.ins-plan {
+  margin: 20px 0px;
+  font-size: 10px;
+}
+
+.care {
+  margin-left: calc( 1% + 3px);
+  margin-right: 5px;
+  margin-top: 15px;
+  width: 65px;
+  height: 45px;
+  display: flex;
+  text-align: justify;
+  font-weight: bold;
 }
 
 .heart {
