@@ -21,9 +21,10 @@
   }
 }
 
+
 .protection {
-  a {
-    color: $blue;
+  a.tos {
+    color: $dark-blue;
   }
 }
 .installments {
@@ -38,7 +39,7 @@
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: $blue;
+    color: $sam-sung-blue;
     cursor: 'pointer';
   }
 }
@@ -112,7 +113,48 @@
 .rewards-btn {
   size: 5px;
   display: inline-block;
-  color: $blue;
+  color: $sam-sung-blue;
+}
+
+.svg-icon {
+  fill: $sam-sung-blue;
+  height: 11px;
+  width: 11px;
+  float: bottom;
+}
+
+.e-t-a {
+  @include nowrap-inline-block;
+  float: right;
+}
+
+.arival {
+  font-size: 9px;
+  color: $grey;
+}
+.free-shipping {
+  margin: 0;
+  font-size: 9px;
+  display: inline-block;
+}
+
+.truck-icon {
+  fill: $sam-sung-blue;
+  height: 15px;
+  width: 15px;
+}
+
+.where-to-buy {
+  font-size: 12px;
+  display: inline-block;
+}
+
+.store-finder {
+  color: $dark-blue;
+  white-space: nowrap;
+  display: block;
+  width: 100;
+  float: left;
 }
 
 .plus-icon {
@@ -120,7 +162,7 @@
   width: 16px;
   margin-right: 4px;
   float: left;
-  fill: $blue;
+  fill: $sam-sung-blue;
 }
 
 .option-select {
@@ -135,7 +177,7 @@
   float: center;
   text-align: center;
   color: white;
-  backGround-color: blue;
+  background-color: blue;
   margin: 0;
   padding: 14px 0;
 }
@@ -154,12 +196,12 @@
 
 .btn-share {
   @include nowrap-inline-block;
-  color: $blue;
+  color: $sam-sung-blue;
 }
 
 .all-stars {
   @include nowrap-inline-block;
-  color: $blue;
+  color: $sam-sung-blue;
 }
 
 .quality-control {

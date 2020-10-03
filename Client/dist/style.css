@@ -16,8 +16,8 @@
   color: #a9a9a9;
 }
 
-.protection a {
-  color: #0077C8;
+.protection a.tos {
+  color: #0037a0;
 }
 
 .installments {
@@ -116,6 +116,49 @@
   color: #0077C8;
 }
 
+.svg-icon {
+  fill: #0077C8;
+  height: 11px;
+  width: 11px;
+  float: bottom;
+}
+
+.e-t-a {
+  white-space: nowrap;
+  display: inline-block;
+  float: right;
+}
+
+.arival {
+  font-size: 9px;
+  color: #a9a9a9;
+}
+
+.free-shipping {
+  margin: 0;
+  font-size: 9px;
+  display: inline-block;
+}
+
+.truck-icon {
+  fill: #0077C8;
+  height: 15px;
+  width: 15px;
+}
+
+.where-to-buy {
+  font-size: 12px;
+  display: inline-block;
+}
+
+.store-finder {
+  color: #0037a0;
+  white-space: nowrap;
+  display: block;
+  width: 100;
+  float: left;
+}
+
 .plus-icon {
   height: 16px;
   width: 16px;
@@ -136,7 +179,7 @@
   float: center;
   text-align: center;
   color: white;
-  backGround-color: blue;
+  background-color: blue;
   margin: 0;
   padding: 14px 0;
 }
