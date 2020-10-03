@@ -7,7 +7,7 @@ const QualityControl = ( { handleClick, object, selected } ) => {
   return(
     <div className='quality-control'>
       <p className='product-code'>{ modelNum[ selected ] }</p>
-      <div className='Stars' style={ { '--rating': stars } }>{ `(${votes})` }</div>
+      <div className='Stars' style={ { '--rating': stars, cursor: 'pointer' } }>{ `${ stars } (${votes})` }</div>
       <p className='btn-share' onClick={handleClick} style={ styl }>Share your product experience</p>
     </div>
 

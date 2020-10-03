@@ -310,6 +310,7 @@
 .btn-share {
   @include nowrap-inline-block;
   color: $sam-sung-blue;
+  font-size: 14px;
 }
 
 .all-stars {
@@ -341,6 +342,8 @@
   font-size: var(--star-size);
   font-family: Times; // make sure ★ appears correctly
   line-height: 1;
+  font-size: 14px;
+  color: $sam-sung-blue;
 
   &::before {
     content: '★★★★★';
@@ -348,5 +351,7 @@
     background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 20px;
   }
 }
+
