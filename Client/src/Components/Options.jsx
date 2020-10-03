@@ -26,10 +26,10 @@ let sample = {
   option: 'Size',
   options: [ '65"', '75"', '85"' ],
   prices: [ 5499.99,  6999.99, 10499.99],
-  insPlan2Yr: 499.99,
-  insPlan4Yr: 799.99,
-  installments: 93.74,
-  buyNow: 4999.99,
+  insPlan2Yr: [499.99, 599.99, 699.99], //changed
+  insPlan4Yr: [799.99, 1199.99, 1599.99],//changed
+  installments: [93.74, 145.83, 218.75],//changed
+  buyNow: [4999.99, 5999.99, 9499.99],// changed
   savings: 1000
 };
 /***************************************/
@@ -56,8 +56,6 @@ class Options extends React.Component {
   handleSelection(index) {
     this.setState( { personalize: index } );
     //  on map bind index of choice
-    //  this.setState( this.state.personalize: index );
-    /** this will cause Choices to re render with new information calculated */
   }
 
   render() {
@@ -85,13 +83,13 @@ class Options extends React.Component {
           />
         </div>
         <hr/>
-        <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } />
+        <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } selection={ personalize }/>
         <br/>
         <hr/>
         <br/>
         <div className='total-home-savings'><span className='tag' >{ tag }</span><p className='explain-the-save'> Save 25% with the Total Home Event. Purchase one eligible Samsun product and get 25% back on an equal or lesser-priced item from a different category -- now through October 3rd. <a style={ { cursor: 'pointer' } } className='click-and-save-info'>Click here to learn more</a>.</p></div>
         <br/>
-        <Financing instl={ product.installments } total={ product.prices[ personalize ] }/>
+        <Financing instl={ product.installments[ personalize ] } total={ product.prices[ personalize ] } savings={ product.savings } />
         <br/>
         <span className='reward-span'>
           <a className='rewards-btn' style={ { cursor: 'pointer' } } onClick={ () => { this.handleClick( ' 2% in rewards' ) }}>{plus}  Earn 2% back in rewards</a>
