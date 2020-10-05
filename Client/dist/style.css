@@ -1,13 +1,14 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
 
 .options {
-  border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
   margin-left: 60%;
   float: right;
+  font-family: sans-serif;
 }
 .options .description {
   display: block;
@@ -16,26 +17,16 @@
   color: #a9a9a9;
 }
 
+.description {
+  font-family: sans-serif;
+}
+
 .protection a.tos {
   color: #0037a0;
 }
 
-.installments {
-  text-align: center;
-  color: #a9a9a9;
-}
-.installments .cost-a-month {
-  white-space: nowrap;
-  display: inline-block;
-  color: black;
-  margin: 0;
-}
-.installments .with-financing-btn {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  color: #0077C8;
-  cursor: "pointer";
+.protection-details {
+  font-size: 14px;
 }
 
 .buy-now-price {
@@ -56,6 +47,7 @@
   display: inline-block;
   color: black;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .savings, .discounted, .total {
@@ -72,33 +64,107 @@
 }
 
 .tag-icon {
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+}
+
+.click-and-save-info {
+  color: #0077C8;
 }
 
 .insurance {
-  border: green 1px solid;
-  text-align: justify;
-}
-.insurance .insurance-box {
-  white-space: nowrap;
-  display: inline-block;
-  border: pink 1px solid;
-  width: 100;
+  display: flex;
+  justify-content: space-around;
 }
 
-.heart {
+.insurance-box {
+  flex-grow: 2;
+  margin: 3px;
+  display: flex;
+  min-width: 210px;
+  border-radius: 5px;
+  border: #a6a6a6 1px solid;
+  font-size: 14px;
+}
+
+.ins-plan {
+  white-space: nowrap;
+  margin: 23px 0px;
+  font-size: 11px;
+  height: 13px;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.care {
+  margin-left: calc( 1% + 3px);
+  margin-right: 5px;
+  margin-top: 15px;
+  width: 65px;
+  height: 45px;
+  display: flex;
+  text-align: justify;
+  font-weight: bold;
+}
+
+.t-o-s {
+  font-size: 10px;
+  margin: 7px 0;
+}
+
+.total-home-savings {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.explain-the-save {
+  margin: 0;
+  font-size: 11px;
+}
+
+.installments {
+  text-align: center;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+.installments .cost-a-month {
   white-space: nowrap;
   display: inline-block;
+  color: black;
   margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.installments .with-financing-btn, .installments img {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #0077C8;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wishlist {
+  display: block;
+  color: #0077C8;
+}
+
+.heart-icon {
+  white-space: nowrap;
+  display: inline-block;
+  margin-left: 5px;
   height: 16px;
   width: 16px;
+  color: #0077C8;
+}
+.heart-icon .wishlist {
+  cursor: pointer;
 }
 
 .product-name {
-  font-size: 19px;
+  font-size: 20px;
   margin: 0;
-  border: red 1px solid;
   width: 80%;
   height: 3em;
   float: left;
@@ -107,37 +173,52 @@
 .reward-span {
   text-align: center;
   display: block;
-  border: purple 1px solid;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .rewards-btn {
-  size: 5px;
   display: inline-block;
   color: #0077C8;
 }
 
+.dynamic-line {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  margin: 35px 0 20px;
+}
+.dynamic-line .or {
+  background: #fff;
+  padding: 0 10px;
+  color: black;
+  font-size: 16px;
+}
+
+.protection-title {
+  font-size: 14px;
+}
+
+.protection-details {
+  font-size: 11px;
+}
+
 .svg-icon {
   fill: #0077C8;
-  height: 11px;
-  width: 11px;
+  height: 13px;
+  width: 13px;
   float: bottom;
 }
 
 .e-t-a {
-  white-space: nowrap;
-  display: inline-block;
+  margin-top: 10px;
+  display: flex;
   float: right;
-}
-
-.arival {
-  font-size: 9px;
-  color: #a9a9a9;
-}
-
-.free-shipping {
-  margin: 0;
-  font-size: 9px;
-  display: inline-block;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-width: 200px;
 }
 
 .truck-icon {
@@ -146,17 +227,45 @@
   width: 15px;
 }
 
-.where-to-buy {
-  font-size: 12px;
-  display: inline-block;
+.free-shipping {
+  margin: 0;
+  font-size: 9px;
+}
+
+.arival {
+  width: 100px;
+  font-size: 9px;
+  color: #a9a9a9;
+  margin: 0;
+  text-align: right;
 }
 
 .store-finder {
   color: #0037a0;
   white-space: nowrap;
-  display: block;
+  display: flex;
   width: 100;
+  align-self: center;
   float: left;
+  margin-top: 20px;
+}
+
+.svg-icon {
+  fill: #0077C8;
+  height: 16px;
+  width: 16px;
+}
+
+.where-to-buy {
+  font-size: 12px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.geo-flag {
+  display: block;
+  margin: 0;
 }
 
 .plus-icon {
@@ -167,9 +276,24 @@
   fill: #0077C8;
 }
 
+.Choices {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
 .option-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 60px;
+  width: calc(33% - 10px);
+  border-radius: 5px;
+  margin: 0 10px 10px 0px;
   text-align: center;
-  border: darkblue 1px solid;
+  border: #a6a6a6 1px solid;
+  font-size: 14px;
 }
 
 .buy-now-span p {
@@ -199,6 +323,7 @@
   white-space: nowrap;
   display: inline-block;
   color: #0077C8;
+  font-size: 14px;
 }
 
 .all-stars {
@@ -210,13 +335,36 @@
 .quality-control {
   white-space: nowrap;
   display: inline-block;
-  font-size: 12px;
-  border: yellow 1px solid;
+  font-size: 10px;
 }
 
 .all-stars, .btn-share {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+:root {
+  --star-size: 60px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+  font-size: 14px;
+  color: #0077C8;
+}
+.Stars::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

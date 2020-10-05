@@ -26,10 +26,10 @@ let sample = {
   option: 'Size',
   options: [ '65"', '75"', '85"' ],
   prices: [ 5499.99,  6999.99, 10499.99],
-  insPlan2Yr: 499.99,
-  insPlan4Yr: 799.99,
-  installments: 93.74,
-  buyNow: 4999.99,
+  insPlan2Yr: [499.99, 599.99, 699.99], //changed
+  insPlan4Yr: [799.99, 1199.99, 1599.99],//changed
+  installments: [93.74, 145.83, 218.75],//changed
+  buyNow: [4999.99, 5999.99, 9499.99],// changed
   savings: 1000
 };
 /***************************************/
@@ -54,10 +54,8 @@ class Options extends React.Component {
     console.log('wish Click');
   }
   handleSelection(index) {
-    console.log('handle Selection')
+    this.setState( { personalize: index } );
     //  on map bind index of choice
-    //  this.setState( this.state.personalize: index );
-    /** this will cause Choices to re render with new information calculated */
   }
 
   render() {
@@ -66,7 +64,7 @@ class Options extends React.Component {
     const { option } = product;
     return (
       <div className='options'>
-        <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize }/>
+        <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize } heart={ SVG.heart }/>
         <br/>
         <QualityControl handleClick={ this.handleClick } object={ products[ view ] } selected={ personalize }/>
 
@@ -77,7 +75,6 @@ class Options extends React.Component {
         </div>
         <div className='possibilities'>
           <p className='option'>{ option }</p>
-          <br/>
           <Choices
           select={ this.handleSelection }
           selected={ personalize } // index of options and prices
@@ -86,11 +83,13 @@ class Options extends React.Component {
           />
         </div>
         <hr/>
-        <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } />
-        <hr/>
-        <div><span className='tag' >{ tag }</span> Save 25% with the Total Home Event. Purchase one eligible Samsun product and get 25% back on an equal or lesser-priced item from a different category -- now through October 3rd. <a style={ { cursor: 'pointer' } } className='click-and-save-info'>Click here to learn more</a>.</div>
+        <Protection ins={ [ product.insPlan2Yr, product.insPlan4Yr ] } selection={ personalize }/>
         <br/>
-        <Financing instl={ product.installments } total={ product.prices[ personalize ] }/>
+        <hr/>
+        <br/>
+        <div className='total-home-savings'><span className='tag' >{ tag }</span><p className='explain-the-save'> Save 25% with the Total Home Event. Purchase one eligible Samsun product and get 25% back on an equal or lesser-priced item from a different category -- now through October 3rd. <a style={ { cursor: 'pointer' } } className='click-and-save-info'>Click here to learn more</a>.</p></div>
+        <br/>
+        <Financing instl={ product.installments[ personalize ] } total={ product.prices[ personalize ] } savings={ product.savings } />
         <br/>
         <span className='reward-span'>
           <a className='rewards-btn' style={ { cursor: 'pointer' } } onClick={ () => { this.handleClick( ' 2% in rewards' ) }}>{plus}  Earn 2% back in rewards</a>
@@ -99,8 +98,7 @@ class Options extends React.Component {
           <b><p className='buy-now'>B U Y &nbsp; &nbsp; N O W</p></b>
         </span>
         <div className='store-finder' onClick={ () => { this.handleClick( ' store finder' ) } } style={ { cursor: 'pointer' } }>
-          <span className='geo-flag'>{geoFlag}</span>
-          <p className='where-to-buy'>Where to buy</p>
+          {geoFlag} <p className='where-to-buy'>Where to buy</p>
         </div>
         <div className='e-t-a'>
           {truck}<p className='free-shipping'><b>Free shipping and free 15-day returns</b></p>

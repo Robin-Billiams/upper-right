@@ -6,12 +6,11 @@
 }
 
 .options {
-  border: black 1px solid;
   margin-right: 10%;
   padding-right: 0%;
   margin-left: 60%;
   float: right;
-
+  font-family: sans-serif;
   .description {
     display: block;
   }
@@ -21,27 +20,18 @@
   }
 }
 
+.description {
+  font-family: sans-serif;
+}
 
 .protection {
   a.tos {
     color: $dark-blue;
   }
 }
-.installments {
-  text-align: center;
-  color: $grey;
-  .cost-a-month {
-    @include nowrap-inline-block;
-    color: black;
-    margin: 0;
-  }
-  .with-financing-btn {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: $sam-sung-blue;
-    cursor: 'pointer';
-  }
+
+.protection-details {
+  font-size: 14px;
 }
 
 .buy-now-price {
@@ -59,6 +49,7 @@
   @include nowrap-inline-block;
   color: black;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .savings, .discounted, .total {
@@ -74,31 +65,98 @@
 }
 
 .tag-icon {
-  height: 12px;
-  width: 12px;
+  height: 14px;
+  width: 14px;
+  margin-right: 5px;
+}
+.click-and-save-info {
+  color: $sam-sung-blue;
 }
 
 .insurance {
-  border: green 1px solid;
+  display: flex;
+  justify-content: space-around
+}
+.insurance-box {
+  flex-grow: 2;
+  margin: 3px;
+  display: flex;
+  min-width:210px;
+  border-radius: 5px;
+  border: #a6a6a6 1px solid;
+  font-size: 14px;
+}
+.ins-plan {
+  white-space: nowrap;
+  margin: 23px 0px;
+  font-size: 11px;
+  height: 13px;
+  flex-grow: 2;
+  text-align: center;
+}
+.care {
+  margin-left: calc( 1% + 3px);
+  margin-right: 5px;
+  margin-top: 15px;
+  width: 65px;
+  height: 45px;
+  display: flex;
   text-align: justify;
-  .insurance-box {
+  font-weight: bold;
+}
+
+.t-o-s {
+  font-size: 10px;
+  margin: 7px 0;
+}
+.total-home-savings {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.explain-the-save {
+  margin: 0;
+  font-size: 11px;
+}
+
+.installments {
+  text-align: center;
+  color: $grey;
+  font-size: 14px;
+  .cost-a-month {
     @include nowrap-inline-block;
-    border: pink 1px solid;
-    width: 100;
+    color: black;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .with-financing-btn, img{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: $sam-sung-blue;
+    font-weight: bold;
+    cursor: pointer;
   }
 }
 
-.heart {
+.wishlist {
+  display: block;
+  color: $sam-sung-blue;
+}
+.heart-icon {
   @include nowrap-inline-block;
-  margin: 0;
+  margin-left: 5px;
   height: 16px;
   width: 16px;
+  color: $sam-sung-blue;
+  .wishlist {
+    cursor: pointer;
+  }
 }
 
 .product-name {
-  font-size: 19px;
+  font-size: 20px;
   margin: 0;
-  border: red 1px solid;
   width: 80%;
   height: 3em;
   float: left;
@@ -107,54 +165,96 @@
 .reward-span{
   text-align: center;
   display: block;
-  border: purple 1px solid;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .rewards-btn {
-  size: 5px;
   display: inline-block;
   color: $sam-sung-blue;
 }
 
+.dynamic-line {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  margin: 35px 0 20px;
+  .or {
+    background: #fff;
+    padding: 0 10px;
+    color: black;
+    font-size: 16px;
+  }
+}
+
+.protection-title {
+  font-size: 14px;
+}
+
+.protection-details {
+  font-size: 11px;
+}
+
 .svg-icon {
   fill: $sam-sung-blue;
-  height: 11px;
-  width: 11px;
+  height: 13px;
+  width: 13px;
   float: bottom;
 }
 
+
+
 .e-t-a {
-  @include nowrap-inline-block;
+  margin-top: 10px;
+  display: flex;
   float: right;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-width: 200px;
 }
-
-.arival {
-  font-size: 9px;
-  color: $grey;
-}
-.free-shipping {
-  margin: 0;
-  font-size: 9px;
-  display: inline-block;
-}
-
 .truck-icon {
   fill: $sam-sung-blue;
   height: 15px;
   width: 15px;
 }
-
-.where-to-buy {
-  font-size: 12px;
-  display: inline-block;
+.free-shipping {
+  margin: 0;
+  font-size: 9px;
 }
+.arival {
+  width: 100px;
+  font-size: 9px;
+  color: $grey;
+  margin: 0;
+  text-align: right;
+}
+
 
 .store-finder {
   color: $dark-blue;
   white-space: nowrap;
-  display: block;
+  display: flex;
   width: 100;
+  align-self: center;
   float: left;
+  margin-top: 20px;
+}
+.svg-icon {
+  fill: $sam-sung-blue;
+  height: 16px;
+  width: 16px;
+}
+.where-to-buy {
+  font-size: 12px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+}
+.geo-flag {
+  display: block;
+  margin: 0;
 }
 
 .plus-icon {
@@ -165,9 +265,24 @@
   fill: $sam-sung-blue;
 }
 
+.Choices {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
 .option-select {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  height: 60px;
+  width: calc(33% - 10px);
+  border-radius: 5px;
+  margin: 0 10px 10px 0px;
   text-align: center;
-  border: darkblue 1px solid;
+  border: #a6a6a6 1px solid;
+  font-size: 14px;
 }
 
 .buy-now-span p {
@@ -186,8 +301,6 @@
   font-size: 14px;
 }
 
-
-
 .product-code {
   @include nowrap-inline-block;
   color: $grey;
@@ -197,6 +310,7 @@
 .btn-share {
   @include nowrap-inline-block;
   color: $sam-sung-blue;
+  font-size: 14px;
 }
 
 .all-stars {
@@ -206,11 +320,38 @@
 
 .quality-control {
   @include nowrap-inline-block;
-  font-size: 12px;
-  border: yellow 1px solid;
+  font-size: 10px;
 }
 
 .all-stars, .btn-share {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+
+:root {
+  --star-size: 60px;
+  --star-color: #fff;
+  --star-background: #fc0;
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times; // make sure ★ appears correctly
+  line-height: 1;
+  font-size: 14px;
+  color: $sam-sung-blue;
+
+  &::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+  }
+}
+
