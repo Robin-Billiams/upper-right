@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const optionsSchema = new mongoose.Schema({
+  _id: Number,
   name: String,
   modelNum: Number,
   description: String,
