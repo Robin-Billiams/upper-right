@@ -6,6 +6,7 @@ import Protection from './Protection.jsx';
 import Financing from './Financing.jsx';
 import SVG from './SVG/icons.jsx';
 import Moment from 'moment';
+import $ from 'jquery';
 
 
 let truck = SVG.truck;
@@ -15,7 +16,7 @@ let tag = SVG.tag;
 
 let sample = {
   _id: 0,
-  name: [`65" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`, `75" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`, `85" Class Q900TS QLED 8K UHD HDR Smart TV (2020)`],
+  name: [`testing`, `testing 2`, `testing 3`],
   modelNum: ["QN65Q900TSFXZA", "QN75Q900TSFXZA", "QN85Q900TSFXZA"],
   averageReview: {
     stars: 4.8,
@@ -39,12 +40,29 @@ class Options extends React.Component {
     super( props );
     this.state = {
       view: 0,
-      products: [ sample ],
-      personalize: 1
+      products: [],
+      product: sample,
+      personalize: 0
     }
     this.handleClick = this.handleClick.bind(this);
     this.wishClick = this.wishClick.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
+  }
+
+  componentDidMount() {
+    if ( window.location.search ) {
+      $.get( '/api/base', ( response ) => {
+        this.setState( { products: response } )
+        this.setState( {product: this.state.products[window.location.search.slice(1)]})
+      });
+    } else {
+      $.get( '/api/base', ( response ) => {
+        console.log( response );
+        this.setState( { products: response } )
+        console.log( this.state.products )
+        this.setState( { product: this.state.products[ this.state.view ] } )
+      });
+    }
   }
 
   handleClick ( input ) {
@@ -59,19 +77,18 @@ class Options extends React.Component {
   }
 
   render() {
-    const { view, products, personalize } = this.state;
-    let product = products[view];
+    const { view, product, personalize } = this.state;
     const { option } = product;
     return (
       <div className='options'>
-        <Focus data={ products[view] } wishClick={this.wishClick} selected={ personalize } heart={ SVG.heart }/>
+        <Focus data={ product } wishClick={this.wishClick} selected={ personalize } heart={ SVG.heart }/>
         <br/>
-        <QualityControl handleClick={ this.handleClick } object={ products[ view ] } selected={ personalize }/>
+        <QualityControl handleClick={ this.handleClick } object={ product } selected={ personalize }/>
 
         <div className='description'>
-          { products[view].keyDetails }
+          { product.keyDetails }
           <br/><br/>
-          { products[view].addDetails }
+          { product.addDetails }
         </div>
         <div className='possibilities'>
           <p className='option'>{ option }</p>
