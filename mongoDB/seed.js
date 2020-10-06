@@ -76,7 +76,7 @@ let ops = function ( i ) {
     return [ '65"', '75"', '85"' ];
   }
   let random = function ( x ) {
-    return Math.floor(Math.random() * 1000 ) + x;
+    return (Math.floor(Math.random() * 1000 ) + x);
   }
   return resultBuilder(random, i);
 }

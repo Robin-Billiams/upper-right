@@ -40,8 +40,9 @@ class Options extends React.Component {
     super( props );
     this.state = {
       view: 0,
+      products: [],
       product: sample,
-      personalize: 1
+      personalize: 0
     }
     this.handleClick = this.handleClick.bind(this);
     this.wishClick = this.wishClick.bind(this);
@@ -50,12 +51,16 @@ class Options extends React.Component {
 
   componentDidMount() {
     if ( window.location.search ) {
-      this.setState( { view: window.location.search })
-      $.get( '/api/selection')
+      $.get( '/api/base', ( response ) => {
+        this.setState( { products: response } )
+        this.setState( {product: this.state.products[window.location.search.slice(1)]})
+      });
     } else {
       $.get( '/api/base', ( response ) => {
         console.log( response );
-        this.setState( { product: response[0] })
+        this.setState( { products: response } )
+        console.log( this.state.products )
+        this.setState( { product: this.state.products[ this.state.view ] } )
       });
     }
   }

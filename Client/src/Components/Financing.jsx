@@ -3,7 +3,7 @@ import React from 'react';
 const Financing = ( { instl, total, savings } ) => {
   return (
     <div className='installments'>
-      <p className='cost-a-month'>${ instl }</p>/mo for <p className='cost-a-month'>48</p> mos at <p className='cost-a-month'>0%</p> APR
+      <p className='cost-a-month'>${ instl.toFixed(2) }</p>/mo for <p className='cost-a-month'>48</p> mos at <p className='cost-a-month'>0%</p> APR
       <br/>
       excludes tax and shipping
       <br/>
