@@ -49,10 +49,15 @@ class Options extends React.Component {
   }
 
   componentDidMount() {
-    $.get( '/api/base', ( response ) => {
-      console.log( response );
-      this.setState( { product: response[0] })
-    });
+    if ( window.location.search ) {
+      this.setState( { view: window.location.search })
+      $.get( '/api/selection')
+    } else {
+      $.get( '/api/base', ( response ) => {
+        console.log( response );
+        this.setState( { product: response[0] })
+      });
+    }
   }
 
   handleClick ( input ) {

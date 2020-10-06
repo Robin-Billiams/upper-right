@@ -22,13 +22,13 @@ app.get('/api/base', ( req, res ) => {
 });
 
 
-app.get('/api/selection/:_id', ( req, res ) => {
+app.get('/:_id', ( req, res ) => {
   Options.find(req.params).exec()
-  .then( (test) => { base = test } )
-  // .then( (result) => { res.send(result) });
-  // console.log( base );
-  res.send(  );
-})
+  .then( (test) => {
+    base = test
+    res.send( base );
+  });
+});
 
 
 
