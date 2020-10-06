@@ -1,4 +1,3 @@
-
 const Options = require( '../mongoDB/buyOption.js' );
 const db = require( '../mongoDB/index.js' );
 const express = require('express');
@@ -15,15 +14,20 @@ const port = 3002;
 //   res.sendFile(`index.html`, {root: './Client/dist'});
 // });
 
-app.get('/api/options', ( req, res ) => {
-  Options.find().exec()// queries automaticaly return promises .exec() allows use of this
+let base = 0;
+
+app.get('/api/base', ( req, res ) => {
+  Options.find({ _id: base }).exec()// queries automaticaly return promises .exec() allows use of this
   .then( ( result ) => { res.send( result ) } );
 });
 
-app.get('/api/selection', ( req, res ) => {
-  Options.find(req.body).exec()
-  // .then( (test) => { console.log( test) } )
-  .then( (result) => { res.send(result) });
+
+app.get('/api/selection/:_id', ( req, res ) => {
+  Options.find(req.params).exec()
+  .then( (test) => { base = test } )
+  // .then( (result) => { res.send(result) });
+  // console.log( base );
+  res.send(  );
 })
 
 

@@ -65,6 +65,9 @@ let deets2 = function ( i ) {
   return __lor.slice(random, random + 7 + random);
 }
 let op = function ( i ) {
+  if ( i === 0 ) {
+    return 'Size';
+  }
   let random = Math.floor(Math.random() * 100 );
   return __lor.slice(random, random + 6);
 }
@@ -78,6 +81,9 @@ let ops = function ( i ) {
   return resultBuilder(random, i);
 }
 let _price = function ( i ) {
+  if ( i === 0 ) {
+    return [ 5499.99,  6999.99, 10499.99];
+  }
   let random = function ( x ) {
     return Math.floor(Math.random() * 20000) + 1000.99 + x;
   }
@@ -115,8 +121,13 @@ let _ins4Yr = function ( i ) {
   return resultBuilder(random, i);
 }
 let _installments = function ( i ) {
-  let result = i === 0 ? 93.74 : ( ( Math.random() * 400 ) + 50 ).toFixed( 2 );
-  return result;
+  if ( i === 0 ) {
+    return [93.74, 145.83, 218.75] ;
+  }
+  let random = function ( x ) {
+    return Number(( ( Math.random() * 400 ) + 50 ).toFixed( 2 )) + x;
+  };
+  return resultBuilder( random, i );
 }// cash every month for 48 monts
 let _buyNow = function ( i, installments ) {
   let result = i === 0 ? 4999.99 : ( installments * 48 ) - ( installments * .2 );
@@ -129,7 +140,7 @@ let sampleData = function () {
     let tmp = _installments( i );
     let save;
     if ( tmp > 208 ) {
-      save = 3000;
+      save = 3003;
     } else if ( tmp > 20 ) {
       save = 1000;
     } else {
@@ -151,7 +162,7 @@ let sampleData = function () {
       prices: _price( i ),
       insPlan2Yr: _ins2Yr( i ), // 2 year insurance plan
       insPlan4Yr: _ins4Yr( i ), // 4 year insurance plan
-      installments: Number( tmp ), // over 48 months 0% APR
+      installments: tmp, // over 48 months 0% APR
       buyNow: Number( _buyNow( i, tmp ).toFixed( 2 ) ),
       savings: savings
     });
