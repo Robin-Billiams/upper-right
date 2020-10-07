@@ -7,6 +7,7 @@ import Financing from './Financing.jsx';
 import SVG from './SVG/icons.jsx';
 import Moment from 'moment';
 import $ from 'jquery';
+const port = 'http://localhost:3002/'
 
 
 let truck = SVG.truck;
@@ -51,18 +52,14 @@ class Options extends React.Component {
 
   componentDidMount() {
     if ( window.location.search ) {
-      $.get( '/api/base', ( response ) => {
-        this.setState( { products: response } )
-        this.setState( {product: this.state.products[window.location.search.slice(1)]})
-      });
-    } else {
-      $.get( '/api/base', ( response ) => {
-        console.log( response );
-        this.setState( { products: response } )
-        console.log( this.state.products )
-        this.setState( { product: this.state.products[ this.state.view ] } )
-      });
+      this.setState( { view: window.location.search.slice( 1 ) } )
     }
+    $.get( port + 'api/base', ( response ) => {
+      console.log( response );
+      this.setState( { products: response } )
+      console.log( this.state.products )
+      this.setState( { product: this.state.products[ this.state.view ] } )
+    });
   }
 
   handleClick ( input ) {
