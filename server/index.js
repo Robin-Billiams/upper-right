@@ -19,12 +19,14 @@ const port = 3002;
 let base = 0;
 
 app.get('/api/base', ( req, res ) => {
+  res.header('Access-Control-Allow-Origin', '*');
   Options.find().exec()// queries automaticaly return promises .exec() allows use of this
   .then( ( result ) => { res.send( result ) } );
 });
 
 
 app.get('/:_id', ( req, res ) => {
+  res.header('Access-Control-Allow-Origin', '*');
   Options.find(req.params).exec()
   .then( (test) => {
     base = test

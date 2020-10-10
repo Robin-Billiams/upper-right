@@ -97,10 +97,7 @@ let _votes = function ( i ) {
   if ( i === 0 ) {
     return 31;
   }
-  let random = function ( x ) {
-    return Math.floor(Math.random() * 1000 );
-  }
-  return resultBuilder(random, i);
+  return Math.floor(Math.random() * 1000 );
 }
 let _ins2Yr = function ( i ) {
   if ( i === 0 ) {
@@ -171,5 +168,14 @@ let sampleData = function () {
 }
 
 
-db.collection( 'options' ).insertManyAsync( sampleData() )
-.then((result) => { db.close() } );
+const createDB = function () {
+  const newProducts = sampleData();
+  Options.deleteMany( {}, function( err, result ) {
+    db.collection( 'options' ).insertManyAsync( sampleData() )
+    .then( ( result ) => { db.close() })
+  });
+};
+
+createDB();
+// db.collection( 'options' ).insertManyAsync( sampleData() )
+// .then((result) => { db.close() } );

@@ -4,7 +4,8 @@ const Choices = ( { select, selected, options, prices } ) => {
   return (
     <div className='Choices'>
       {options.map( ( choice, index ) => {
-        let difference = index < selected ? `-$${ Math.abs( prices[ index ] - prices[ selected ] ) }` : `+$${ prices[ index ] - prices[ selected ] }`
+        let difference = index < selected ? `-$${ ( ( Math.abs( prices[ index ] - prices[ selected ] ) ).toFixed( 2 ) ).toLocaleString( 'en' ) }` : `+$${ ( ( prices[ index ] - prices[ selected ] ).toFixed( 2 ) ).toLocaleString( 'en' ) }`
+        console.log( difference)
         if ( index === selected ) {
           return (
             <span onClick={select.bind( this, index ) } style={ { cursor: 'pointer' } } className='option-select' key={ index }>

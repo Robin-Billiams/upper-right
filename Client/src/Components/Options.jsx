@@ -16,23 +16,23 @@ let plus = SVG.plus;
 let tag = SVG.tag;
 
 let sample = {
-  _id: 0,
-  name: [`testing`, `testing 2`, `testing 3`],
-  modelNum: ["QN65Q900TSFXZA", "QN75Q900TSFXZA", "QN85Q900TSFXZA"],
-  averageReview: {
-    stars: 4.8,
-    votes:31
-  },
-  keyDetails: `Edge-to-edge viewing with Infinity Screen`,
-  addDetails: `See the mind-blowing sharpness and depth of real 8K with 16 times more resolution than HDTV.`,
-  option: 'Size',
-  options: [ '65"', '75"', '85"' ],
-  prices: [ 5499.99,  6999.99, 10499.99],
-  insPlan2Yr: [499.99, 599.99, 699.99], //changed
-  insPlan4Yr: [799.99, 1199.99, 1599.99],//changed
-  installments: [93.74, 145.83, 218.75],//changed
-  buyNow: [4999.99, 5999.99, 9499.99],// changed
-  savings: 1000
+  // _id: 0,
+  // name: [`testing`, `testing 2`, `testing 3`],
+  // modelNum: ["QN65Q900TSFXZA", "QN75Q900TSFXZA", "QN85Q900TSFXZA"],
+  // averageReview: {
+  //   stars: 4.8,
+  //   votes:31
+  // },
+  // keyDetails: `Edge-to-edge viewing with Infinity Screen`,
+  // addDetails: `See the mind-blowing sharpness and depth of real 8K with 16 times more resolution than HDTV.`,
+  // option: 'Size',
+  // options: [ '65"', '75"', '85"' ],
+  // prices: [ 5499.99,  6999.99, 10499.99],
+  // insPlan2Yr: [499.99, 599.99, 699.99], //changed
+  // insPlan4Yr: [799.99, 1199.99, 1599.99],//changed
+  // installments: [93.74, 145.83, 218.75],//changed
+  // buyNow: [4999.99, 5999.99, 9499.99],// changed
+  // savings: 1000
 };
 /***************************************/
 
@@ -55,10 +55,7 @@ class Options extends React.Component {
       this.setState( { view: window.location.search.slice( 1 ) } )
     }
     $.get( port + 'api/base', ( response ) => {
-      console.log( response );
-      this.setState( { products: response } )
-      console.log( this.state.products )
-      this.setState( { product: this.state.products[ this.state.view ] } )
+      this.setState( { products: response, product: response[this.state.view] } )
     });
   }
 
@@ -74,6 +71,9 @@ class Options extends React.Component {
   }
 
   render() {
+    if ( this.state.products.length === 0 ) {
+      return ( null );
+    }
     const { view, product, personalize } = this.state;
     const { option } = product;
     return (
