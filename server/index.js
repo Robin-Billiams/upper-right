@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static(__dirname + '/../Client/dist'));
 
-const port = 3002;
+const port = 4003;
 
 // app.get('/', ( req, res ) => {
 //   res.sendFile(`index.html`, {root: './Client/dist'});
