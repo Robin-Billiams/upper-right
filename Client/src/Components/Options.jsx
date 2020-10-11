@@ -7,7 +7,7 @@ import Financing from './Financing.jsx';
 import SVG from './SVG/icons.jsx';
 import Moment from 'moment';
 import $ from 'jquery';
-const port = 'http://3.138.112.107/4003/'
+const port = 'http://3.138.112.107:4003/'
 
 
 let truck = SVG.truck;
