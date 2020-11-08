@@ -1,7 +1,7 @@
 # Sam-Has-Sung
 A single service of an entire point of sale to an ecommerce webpage.
 
-![Upper end of site](https://imgur.com/gallery/vUxxVXv)
+![Upper end of site](/image/W7D4.png)
 
 
 run npm install
