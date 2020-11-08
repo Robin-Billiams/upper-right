@@ -14,4 +14,4 @@ start mongo on your machine
 
 navigate to http://localhost:4003/
 
-use http://localhost:4003/?# or http://localhost:4003/?## to search
+use http://localhost:4003/?#, http://localhost:4003/?## or http://localhost:4003/?## to search
