@@ -4,14 +4,14 @@ size or color. Insurance and payment plans will change and reflect the decisions
 
 ![Upper end of site](/image/W7D4.png)
 
+## To spin up this application
 
-## run npm install
-## start mongo on your machine
-
-1. `npm run build`
-2. `sudo service mongodb start`
-3. `npm run seed`
-4. `npm run start`
+1. run npm install
+2. start mongo on your machine
+3. `npm run build`
+4. `sudo service mongodb start`
+5. `npm run seed`
+6. `npm run start`
 
 ## navigate to http://localhost:4003/
 
